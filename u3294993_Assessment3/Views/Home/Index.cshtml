@@ -1,8 +1,202 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<u3294993_Assessment3.Models.AIImage>
+
+@{
+    ViewData["Title"] = "AI in Healthcare";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<section class="healthcare-hero">
+    <h1>Artificial Intelligence in Healthcare</h1>
+
+    <p>
+        Artificial intelligence is transforming healthcare by helping
+        professionals analyse medical images, support patients and identify
+        potential health risks. These technologies can assist clinical
+        decision-making, improve efficiency and support earlier intervention.
+        AI systems work alongside healthcare professionals rather than
+        replacing their expertise.
+    </p>
+</section>
+
+<div class="healthcare-parallax">
+
+    <section class="healthcare-feature" data-reveal>
+        <div class="healthcare-information">
+            <h3>AI-Powered Diagnostics</h3>
+
+            <p>
+                AI-powered diagnostic systems analyse medical images and
+                clinical information to identify patterns that may require
+                further investigation. These tools can assist professionals
+                in areas such as radiology, pathology and disease detection.
+            </p>
+
+            <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices">
+                Read more
+            </a>
+        </div>
+
+        <div class="healthcare-media">
+            <a href="https://www.fda.gov/medical-devices">
+                <figure class="healthcare-image">
+                    <img src="~/images/gemini.jpg"
+                         alt="AI-assisted medical imaging" />
+
+                    <figcaption>
+                        AI can assist specialists in reviewing medical images
+                        and identifying areas for further examination.
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="https://www.cancer.gov/">
+                <figure class="healthcare-image">
+                    <img src="~/images/gemini.jpg"
+                         alt="AI-assisted pathology analysis" />
+
+                    <figcaption>
+                        Computational tools can support pathology research
+                        and the analysis of tissue samples.
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+
+    <section class="healthcare-feature healthcare-feature-reverse" data-reveal>
+        <div class="healthcare-information">
+            <h3>Virtual Health Assistants</h3>
+
+            <p>
+                Virtual health assistants use conversational technology
+                to answer general health questions, provide reminders
+                and help patients access information. They can support
+                routine communication while directing clinical concerns
+                to qualified healthcare professionals.
+            </p>
+
+            <a href="https://www.who.int/health-topics/digital-health">
+                Read more
+            </a>
+        </div>
+
+        <div class="healthcare-media">
+            <a href="https://www.who.int/health-topics/digital-health">
+                <figure class="healthcare-image">
+                    <img src="~/images/gemini.jpg"
+                         alt="Virtual healthcare assistant" />
+
+                    <figcaption>
+                        Digital assistants can make general healthcare
+                        information easier for patients to access.
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="https://medlineplus.gov/">
+                <figure class="healthcare-image">
+                    <img src="~/images/gemini.jpg"
+                         alt="Patient using a healthcare chatbot" />
+
+                    <figcaption>
+                        Patient-facing chat interfaces can provide reminders
+                        and help users find reliable health information.
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+
+    <section class="healthcare-feature" data-reveal>
+        <div class="healthcare-information">
+            <h3>Predictive Analytics</h3>
+
+            <p>
+                Predictive analytics uses medical and historical data
+                to estimate possible health risks and future outcomes.
+                These tools can help healthcare teams identify trends,
+                plan resources and consider earlier preventative care.
+            </p>
+
+            <a href="https://www.healthit.gov/">
+                Read more
+            </a>
+        </div>
+
+        <div class="healthcare-media">
+            <a href="https://www.healthit.gov/">
+                <figure class="healthcare-image">
+                    <img src="~/images/gemini.jpg"
+                         alt="Predictive healthcare analytics dashboard" />
+
+                    <figcaption>
+                        Predictive models can identify patterns that may
+                        help clinicians assess patient risks.
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="https://www.cdc.gov/">
+                <figure class="healthcare-image">
+                    <img src="~/images/gemini.jpg"
+                         alt="Healthcare monitoring and risk analysis" />
+
+                    <figcaption>
+                        Health monitoring and population data can help identify
+                        emerging trends and support prevention.
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+
 </div>
+
+<section class="home-ai-gallery">
+    <h2>Upload AI Images</h2>
+
+    <div class="home-ai-upload">
+        @if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            <a asp-controller="AIImages" asp-action="Create">
+                Click here to upload a new AI image
+            </a>
+        }
+        else
+        {
+            <p>
+                Please
+                <a asp-area="Identity" asp-page="/Account/Login">login</a>
+                or
+                <a asp-area="Identity" asp-page="/Account/Register">register</a>
+                to upload your AI images.
+            </p>
+        }
+    </div>
+
+    @if (!Model.Any())
+    {
+        <p>No images have been uploaded yet.</p>
+    }
+    else
+    {
+        <div class="home-ai-grid">
+            @foreach (var item in Model)
+            {
+                <a asp-controller="AIImages"
+                   asp-action="Index"
+                   asp-fragment="image-@item.Id"
+                   class="home-ai-card">
+
+                    <img src="@Url.Content("~/uploads/" + item.Filename)"
+                         alt="@item.Prompt" />
+
+                    <div class="home-ai-overlay">
+                        <h3>@item.ImageGenerator</h3>
+                        <p>@item.Prompt</p>
+                        <span>Likes: @item.Like</span>
+                    </div>
+                </a>
+            }
+        </div>
+    }
+</section>

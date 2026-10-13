@@ -1,9 +1,5 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿window.addEventListener("load", function () {
 
-// Write your JavaScript code.
-
-window.addEventListener("load", function () {
     const params = new URLSearchParams(window.location.search);
     const highlight = params.get("highlight");
 
@@ -17,4 +13,44 @@ window.addEventListener("load", function () {
             });
         }
     }
+
+    const hero = document.querySelector(".healthcare-hero");
+
+    if (hero !== null) {
+        const information = document.createElement("aside");
+
+        information.className = "healthcare-note";
+        information.textContent =
+            "AI supports healthcare professionals but does not replace clinical judgement.";
+
+        hero.appendChild(information);
+    }
+
+    const featureSections =
+        document.querySelectorAll(".healthcare-feature");
+
+    function checkFeatureVisibility() {
+
+        featureSections.forEach(function (section) {
+
+            const position = section.getBoundingClientRect();
+
+            if (position.top >= 0 &&
+                position.bottom <= window.innerHeight) {
+
+                section.classList.add("feature-visible");
+
+            }
+            else {
+
+                section.classList.remove("feature-visible");
+
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkFeatureVisibility);
+    window.addEventListener("resize", checkFeatureVisibility);
+
+    checkFeatureVisibility();
 });

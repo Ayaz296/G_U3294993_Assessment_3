@@ -1,28 +1,142 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
-/* Styling: Index*/
+/* Navigation */
 
+body {
+    margin-bottom: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.healthcare-navbar {
+    background-color: #071c35;
+    padding: 12px 20px;
+}
+
+    .healthcare-navbar .navbar-brand {
+        color: #f8bd08;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+        .healthcare-navbar .navbar-brand:hover {
+            color: white;
+        }
+
+    .healthcare-navbar .nav-link {
+        color: white;
+        margin: 0 10px;
+    }
+
+        .healthcare-navbar .nav-link:hover,
+        .healthcare-navbar .nav-link:focus {
+            color: #f8bd08;
+        }
+
+    .healthcare-navbar .navbar-toggler {
+        border-color: white;
+    }
+
+.healthcare-main {
+    flex: 1;
+}
+
+/*Footer */
+
+.healthcare-footer {
+    width: 100%;
+    background-color: #071c35;
+    color: white;
+    text-align: center;
+    padding: 30px 20px 15px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+    .footer-icons a {
+        color: white;
+        font-size: 1.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .footer-icons a:hover,
+        .footer-icons a:focus {
+            color: #f8bd08;
+        }
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .footer-links a:hover,
+        .footer-links a:focus {
+            color: #f8bd08;
+            text-decoration: underline;
+        }
+
+.healthcare-footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 575px) {
+    .healthcare-navbar {
+        padding: 10px 15px;
+    }
+
+    .footer-icons {
+        gap: 20px;
+    }
+
+        .footer-icons a {
+            font-size: 1.5rem;
+        }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+/* Styling: AIImages/Index */
 
 .ai-gallery {
     width: 100%;
@@ -35,16 +149,16 @@ body {
     color: white;
 }
 
-.ai-gallery-header h1 {
-    font-size: clamp(2rem, 4vw, 4rem);
-    font-weight: bold;
-    color: #f8bd08;
-    text-shadow: 4px 4px 0 navy, 4px 4px 8px white;
-}
+    .ai-gallery-header h1 {
+        font-size: clamp(2rem, 4vw, 4rem);
+        font-weight: bold;
+        color: #f8bd08;
+        text-shadow: 4px 4px 0 navy, 4px 4px 8px white;
+    }
 
-.ai-gallery-header a {
-    color: #ffffff;
-}
+    .ai-gallery-header a {
+        color: #ffffff;
+    }
 
 .ai-gallery-item {
     display: grid;
@@ -53,30 +167,30 @@ body {
     background: linear-gradient(to bottom, #ff9933, #ffe6cc, white);
 }
 
-.ai-gallery-item:nth-of-type(even) {
-    background: linear-gradient(to bottom, #3333ff, #ccccff, white);
-}
+    .ai-gallery-item:nth-of-type(even) {
+        background: linear-gradient(to bottom, #3333ff, #ccccff, white);
+    }
 
-.ai-gallery-item:nth-of-type(even) .ai-gallery-image {
-    order: 2;
-}
+        .ai-gallery-item:nth-of-type(even) .ai-gallery-image {
+            order: 2;
+        }
 
 .ai-gallery-image {
     width: 100%;
     overflow: hidden;
 }
 
-.ai-gallery-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
+    .ai-gallery-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
 
-.ai-gallery-image img:hover {
-    transform: scale(1.05);
-}
+        .ai-gallery-image img:hover {
+            transform: scale(1.05);
+        }
 
 .ai-gallery-content {
     padding: 35px 30px;
@@ -85,23 +199,23 @@ body {
     justify-content: center;
 }
 
-.ai-gallery-content h3 {
-    font-family: "Oxygen", Arial, sans-serif;
-    color: navy;
-    text-shadow: 2px 2px 0 white, 2px 2px 4px navy;
-    letter-spacing: 7px;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 20px;
-    overflow-wrap: anywhere;
-}
+    .ai-gallery-content h3 {
+        font-family: "Oxygen", Arial, sans-serif;
+        color: navy;
+        text-shadow: 2px 2px 0 white, 2px 2px 4px navy;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 20px;
+        overflow-wrap: anywhere;
+    }
 
-.ai-gallery-content p {
-    font-family: Arial, sans-serif;
-    color: black;
-    font-size: 1rem;
-    overflow-wrap: anywhere;
-}
+    .ai-gallery-content p {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
 
 .ai-gallery-date,
 .ai-gallery-likes {
@@ -110,6 +224,8 @@ body {
 
 .ai-gallery-actions {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
     margin-top: 10px;
 }
@@ -124,9 +240,9 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .ai-gallery-item:nth-of-type(even) .ai-gallery-image {
-        order: 0;
-    }
+        .ai-gallery-item:nth-of-type(even) .ai-gallery-image {
+            order: 0;
+        }
 
     .ai-gallery-image img {
         height: 260px;
@@ -136,10 +252,10 @@ body {
         padding: 25px 20px;
     }
 
-    .ai-gallery-content h3 {
-        font-size: 1.3rem;
-        letter-spacing: 3px;
-    }
+        .ai-gallery-content h3 {
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+        }
 }
 
 @media (max-width: 575px) {
@@ -155,7 +271,404 @@ body {
         padding: 20px 15px;
     }
 
-    .ai-gallery-content p {
-        font-size: 0.9rem;
+        .ai-gallery-content p {
+            font-size: 0.9rem;
+        }
+}
+
+/* Styling: Home/Index - Introduction */
+
+.healthcare-hero {
+    min-height: 75vh;
+    background-image: linear-gradient( rgba(2, 16, 37, 0.4), rgba(2, 16, 37, 0.7) ), url("../images/healthcare-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 9vw 3vw 6vw;
+}
+
+    .healthcare-hero h1 {
+        font-family: "Anton", Impact, sans-serif;
+        font-size: 7vw;
+        background-image: linear-gradient( to right, brown, brown, yellow, white, yellow, brown, brown );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px brown;
     }
+
+    .healthcare-hero p {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 2vw;
+        max-width: 950px;
+        margin: 25px auto;
+    }
+
+/* Styling: Home/Index - Healthcare Sections */
+
+.healthcare-parallax {
+    background-image: linear-gradient( rgba(3, 18, 40, 0.35), rgba(3, 18, 40, 0.35) ), url("../images/healthcare-background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 70px 3vw;
+}
+
+.healthcare-feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 290px;
+    margin: 45px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease;
+}
+
+    .healthcare-feature.feature-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.healthcare-feature-reverse {
+    flex-direction: row-reverse;
+}
+
+.healthcare-information {
+    flex: 2;
+    padding: 25px;
+    border: 1px solid white;
+    background-color: rgba(2, 20, 42, 0.75);
+    color: white;
+}
+
+    .healthcare-information h3 {
+        font-family: "Anton", Impact, sans-serif;
+        color: #f8bd08;
+        font-size: clamp(1.8rem, 4vw, 3.5rem);
+        text-shadow: 2px 2px 0 navy, 2px 2px 4px white;
+    }
+
+    .healthcare-information p {
+        font-family: "Lato", Arial, sans-serif;
+        font-size: clamp(0.95rem, 1.5vw, 1.3rem);
+    }
+
+    .healthcare-information a {
+        color: white;
+        text-decoration: underline;
+    }
+
+/* Styling: Home/Index - Images and Hover */
+
+.healthcare-media {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+    .healthcare-media a {
+        position: relative;
+        display: block;
+        aspect-ratio: 1;
+        overflow: hidden;
+        color: white;
+    }
+
+.healthcare-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.healthcare-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.healthcare-media figcaption {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+    background-color: rgba(45, 10, 20, 0.92);
+    color: white;
+    font: normal 1rem Arial, sans-serif;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.healthcare-media a:hover figcaption,
+.healthcare-media a:focus-visible figcaption {
+    opacity: 0.9;
+}
+
+/* Styling: Home/Index - Uploaded Images */
+
+.home-ai-gallery {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #071c35;
+    color: white;
+}
+
+    .home-ai-gallery h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #f8bd08;
+    }
+
+.home-ai-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.home-ai-card {
+    position: relative;
+    display: block;
+    height: 200px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+}
+
+    .home-ai-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.home-ai-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-wrap: anywhere;
+}
+
+.home-ai-card:hover .home-ai-overlay,
+.home-ai-card:focus-visible .home-ai-overlay {
+    opacity: 1;
+}
+
+.home-ai-overlay h3 {
+    font-size: 1rem;
+}
+
+.home-ai-overlay p {
+    font-size: 0.8rem;
+}
+
+.home-ai-upload {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .home-ai-upload a {
+        color: #f8bd08;
+    }
+
+/* Responsive: Tablet */
+
+@media (max-width: 991px) {
+    .home-ai-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .healthcare-hero h1 {
+        font-size: 9vw;
+    }
+
+    .healthcare-hero p {
+        font-size: 1rem;
+    }
+
+    .healthcare-feature,
+    .healthcare-feature-reverse {
+        flex-direction: column;
+    }
+
+    .healthcare-information,
+    .healthcare-media {
+        width: 100%;
+    }
+
+    .healthcare-parallax {
+        padding: 35px 15px;
+        background-attachment: scroll;
+    }
+}
+
+/* Responsive: Mobile */
+
+@media (max-width: 575px) {
+    .healthcare-hero {
+        min-height: 65vh;
+        padding: 60px 20px;
+    }
+
+    .healthcare-information {
+        padding: 18px;
+    }
+
+        .healthcare-information h3 {
+            font-size: 1.8rem;
+        }
+
+    .healthcare-media {
+        gap: 8px;
+    }
+
+        .healthcare-media figcaption {
+            font-size: 0.8rem;
+            padding: 8px;
+        }
+
+    .home-ai-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-ai-card {
+        height: 150px;
+    }
+
+    .home-ai-overlay {
+        padding: 8px;
+    }
+
+        .home-ai-overlay h3 {
+            font-size: 0.8rem;
+        }
+
+        .home-ai-overlay p {
+            font-size: 0.7rem;
+        }
+}
+.healthcare-note {
+    max-width: 650px;
+    margin: 25px auto 0;
+    padding: 15px;
+    color: white;
+    background-color: rgba(2, 20, 42, 0.7);
+    border: 1px solid white;
+    text-align: center;
+}
+
+/* Styling Contact Page */
+
+/* Styling: Home/Contact */
+
+.contact-page {
+    width: 100%;
+    min-height: 85vh;
+    padding: 50px 3vw 80px;
+    background-image: linear-gradient( rgba(2, 16, 37, 0.65), rgba(2, 16, 37, 0.65) ), url("../images/healthcare-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contact-heading {
+    font-family: "Anton", Impact, sans-serif;
+    font-size: 7vw;
+    text-align: center;
+    margin-bottom: 50px;
+    background-image: linear-gradient( to right, brown, brown, yellow, white, yellow, brown, brown );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-card {
+    height: 100%;
+    padding: 25px;
+    background-color: rgba(7, 28, 53, 0.85);
+    border: 1px solid white;
+    box-shadow: 10px 10px 0px 0px #f8f6b0;
+}
+
+    .contact-card h2 {
+        font-family: "Niconne", cursive;
+        color: yellow;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 0 navy, 2px 2px 2px white;
+        margin-bottom: 25px;
+    }
+
+    .contact-card p,
+    .contact-card li {
+        font-family: Arial, sans-serif;
+        color: yellow;
+        font-size: clamp(0.9rem, 1vw, 1.1rem);
+        line-height: 1.7;
+    }
+
+    .contact-card a {
+        color: white;
+        overflow-wrap: anywhere;
+    }
+
+        .contact-card a:hover {
+            color: #f8bd08;
+        }
+
+    .contact-card ul {
+        padding-left: 20px;
+    }
+
+    .contact-card li {
+        margin-bottom: 8px;
+    }
+
+@media (max-width: 991px) {
+    .contact-page {
+        padding: 40px 25px 70px;
+    }
+
+    .contact-heading {
+        font-size: 8vw;
+    }
+
+    .contact-card {
+        height: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-page {
+        padding: 30px 20px 60px;
+        background-attachment: scroll;
+    }
+
+    .contact-heading {
+        font-size: 10vw;
+        margin-bottom: 35px;
+    }
+
+    .contact-card {
+        padding: 20px;
+        box-shadow: 6px 6px 0px 0px #f8f6b0;
+    }
+
+        .contact-card h2 {
+            font-size: 2rem;
+        }
 }
