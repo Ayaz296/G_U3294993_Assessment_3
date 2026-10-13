@@ -1,79 +1,103 @@
 @model IEnumerable<u3294993_Assessment3.Models.AIImage>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "AI Images";
 }
 
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success" role="alert">
-        @TempData["SuccessMessage"]
+<section class="ai-gallery">
+
+    <div class="ai-gallery-header">
+        <h1>AI in Healthcare Gallery</h1>
+
+        @if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            <a asp-controller="AIImages" asp-action="Create">
+                Click here to upload a new AI image
+            </a>
+        }
+        else
+        {
+            <p>
+                Please
+                <a asp-area="Identity" asp-page="/Account/Login">login</a>
+                or
+                <a asp-area="Identity" asp-page="/Account/Register">register</a>
+                to upload an AI image.
+            </p>
+        }
     </div>
-}
 
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger" role="alert">
-        @TempData["ErrorMessage"]
-    </div>
-}
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
 
-<h1>Index</h1>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Prompt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageGenerator)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UploadDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Filename)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Like)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.canIncreaseLike)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(model => item.Prompt)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.ImageGenerator)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.UploadDate)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Filename)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Like)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.canIncreaseLike)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    @if (!Model.Any())
+    {
+        <div class="ai-gallery-empty">
+            <p>No AI images have been uploaded yet.</p>
+        </div>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <article class="ai-gallery-item" id="image-@item.Id">
+
+                <div class="ai-gallery-image">
+                    <img src="@Url.Content("~/uploads/" + item.Filename)"
+                         alt="@item.Prompt" />
+                </div>
+
+                <div class="ai-gallery-content">
+                    <h3>@item.ImageGenerator</h3>
+
+                    <p>@item.Prompt</p>
+
+                    <p class="ai-gallery-date">
+                        Uploaded: @item.UploadDate.ToString("dd/MM/yyyy")
+                    </p>
+
+                    <div class="ai-gallery-actions">
+
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <form asp-controller="AIImages"
+                                  asp-action="Like"
+                                  asp-route-id="@item.Id"
+                                  method="post">
+                                <button type="submit" class="btn btn-primary">
+                                    Like (@item.Like)
+                                </button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span>Likes: @item.Like</span>
+                        }
+
+                        @if (User.IsInRole("admin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id"
+                               class="btn btn-success">Edit</a>
+
+                            <a asp-action="Delete" asp-route-id="@item.Id"
+                               class="btn btn-danger">Delete</a>
+                        }
+
+                    </div>
+                </div>
+
+            </article>
+        }
+    }
+</section>

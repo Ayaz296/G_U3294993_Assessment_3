@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("u3294993_Assessment3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34b60b655c8027e9ba35d33abd99e5ffaacb9fd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2717bac7e9388a61924ed4d8dc3a29c6eaf56d95")]
 [assembly: System.Reflection.AssemblyProductAttribute("u3294993_Assessment3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("u3294993_Assessment3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

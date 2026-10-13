@@ -27,6 +27,33 @@ public class AIImagesController : Controller
             .ToListAsync());
     }
 
+    [Authorize]
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Like(int id)
+    {
+        var aiimage = await _context.AIImage.FindAsync(id);
+
+        if (aiimage == null)
+        {
+            return NotFound();
+        }
+
+        string userId = User.FindFirst(
+            System.Security.Claims.ClaimTypes.NameIdentifier)?.Value ?? "";
+
+        string sessionKey = "Liked_" + userId + "_" + id;
+
+        if (HttpContext.Session.GetString(sessionKey) != "true")
+        {
+            aiimage.Like++;
+            await _context.SaveChangesAsync();
+            HttpContext.Session.SetString(sessionKey, "true");
+        }
+
+        return RedirectToAction(nameof(Index), new { highlight = id });
+    }
+
     // GET: AIIMAGES/Details/5
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> Details(int? id)
