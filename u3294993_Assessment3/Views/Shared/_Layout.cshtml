@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0" />
 
-    <title>@ViewData["Title"] - AI in Healthcare</title>
+    <title>@ViewData["Title"] - HealthX</title>
 
     <link rel="stylesheet"
           href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -13,7 +14,8 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato&family=Montserrat&family=Niconne&family=Oxygen&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Lato&amp;family=Montserrat&amp;family=Niconne&amp;family=Oxygen&amp;display=swap"
+          rel="stylesheet" />
 
     <link rel="stylesheet"
           href="~/css/site.css"
@@ -26,7 +28,10 @@
 
 <body>
 
-    <header>
+    <header class="healthcare-header">
+
+  
+
         <nav class="navbar navbar-expand-sm navbar-dark healthcare-navbar">
             <div class="container-fluid">
 
@@ -34,7 +39,7 @@
                    asp-area=""
                    asp-controller="Home"
                    asp-action="Index">
-                    AI in Healthcare
+                    BioTech 
                 </a>
 
                 <button class="navbar-toggler"
@@ -93,7 +98,9 @@
             @RenderBody()
         </main>
     </div>
-    @* Footer Icons & Links*@
+
+    @* Footer Icons & Links *@
+
     <footer class="healthcare-footer">
         <div class="container-fluid">
 

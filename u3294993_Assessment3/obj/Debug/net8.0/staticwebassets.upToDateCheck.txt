@@ -1,7 +1,12 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\1.mp4
+wwwroot\images\13266.jpg
+wwwroot\images\2.mp4
+wwwroot\images\769.jpg
 wwwroot\images\gemini.jpg
 wwwroot\images\healthcare-preview.jpg
+wwwroot\images\StockCake-Professional_medical_instrument-2362781-standard.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map

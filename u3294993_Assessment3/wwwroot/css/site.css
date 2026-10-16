@@ -31,14 +31,33 @@ body {
     flex-direction: column;
 }
 
+
+.healthcare-header {
+    position: absolute;
+    top: 10px;
+    left:0.5%;
+    width: 99%;
+    z-index: 10;
+}
+
 .healthcare-navbar {
-    background-color: #071c35;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 18px 18px 18px 18px;
     padding: 12px 20px;
+
+}
+
+header {
+    position: relative;
+    z-index: 10;
+    margin-bottom: -64px;
 }
 
     .healthcare-navbar .navbar-brand {
-        color: #f8bd08;
-        font-size: 1.5rem;
+        color: whitesmoke;
+        font-size: 1.0rem;
         font-weight: bold;
     }
 
@@ -46,15 +65,24 @@ body {
             color: white;
         }
 
-    .healthcare-navbar .nav-link {
-        color: white;
-        margin: 0 10px;
+.healthcare-navbar .navbar-nav .nav-link {
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+/*Overriding bootstrap colours*/
+.healthcare-navbar .text-dark {
+    color: #ffffff !important;
+}
+
+    .healthcare-navbar .text-dark:hover {
+        color: gray !important;
     }
 
-        .healthcare-navbar .nav-link:hover,
-        .healthcare-navbar .nav-link:focus {
-            color: #f8bd08;
-        }
+    .healthcare-navbar .navbar-nav .nav-link:hover,
+    .healthcare-navbar .navbar-nav .nav-link:focus {
+        color: gray;
+    }
 
     .healthcare-navbar .navbar-toggler {
         border-color: white;
@@ -276,34 +304,83 @@ body {
         }
 }
 
-/* Styling: Home/Index - Introduction */
+/* Styling: Home/Index  */
+
 
 .healthcare-hero {
+    position: relative;
     min-height: 75vh;
-    background-image: linear-gradient( rgba(2, 16, 37, 0.4), rgba(2, 16, 37, 0.7) ), url("../images/healthcare-hero.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: #071c35;
     color: white;
     text-align: center;
     padding: 9vw 3vw 6vw;
+    overflow: hidden;
+}
+
+.healthcare-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.healthcare-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(2, 16, 37, 0.4), rgba(2, 16, 37, 0.7) );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.healthcare-hero h1,
+.healthcare-hero p,
+.healthcare-hero  {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+.healthcare-hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
     .healthcare-hero h1 {
         font-family: "Anton", Impact, sans-serif;
         font-size: 7vw;
-        background-image: linear-gradient( to right, brown, brown, yellow, white, yellow, brown, brown );
+        padding: 0 2vw;
+        margin: 0;
+        text-align: center;
+        background-image: linear-gradient( to right, #3c075e, #7114a1, #b024a9, #8b1aaf, #3c075e );
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px brown;
+        -webkit-text-stroke: 1px none;
     }
 
     .healthcare-hero p {
         font-family: "Montserrat", Arial, sans-serif;
         font-size: 2vw;
+        text-align: center;
         max-width: 950px;
-        margin: 25px auto;
+        margin: 25px auto 0;
     }
+
+
 
 /* Styling: Home/Index - Healthcare Sections */
 
@@ -562,15 +639,7 @@ body {
             font-size: 0.7rem;
         }
 }
-.healthcare-note {
-    max-width: 650px;
-    margin: 25px auto 0;
-    padding: 15px;
-    color: white;
-    background-color: rgba(2, 20, 42, 0.7);
-    border: 1px solid white;
-    text-align: center;
-}
+
 
 /* Styling Contact Page */
 
@@ -671,4 +740,6 @@ body {
         .contact-card h2 {
             font-size: 2rem;
         }
+
+
 }

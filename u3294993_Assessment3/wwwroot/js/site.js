@@ -1,5 +1,6 @@
 ﻿window.addEventListener("load", function () {
 
+    // Scroll to the image after clicking Like
     const params = new URLSearchParams(window.location.search);
     const highlight = params.get("highlight");
 
@@ -14,18 +15,10 @@
         }
     }
 
-    const hero = document.querySelector(".healthcare-hero");
 
-    if (hero !== null) {
-        const information = document.createElement("aside");
 
-        information.className = "healthcare-note";
-        information.textContent =
-            "AI supports healthcare professionals but does not replace clinical judgement.";
 
-        hero.appendChild(information);
-    }
-
+    // The Transition effec from week 6
     const featureSections =
         document.querySelectorAll(".healthcare-feature");
 
@@ -35,16 +28,28 @@
 
             const position = section.getBoundingClientRect();
 
-            if (position.top >= 0 &&
-                position.bottom <= window.innerHeight) {
+            // Check whether the section fits in the viewport
+            const fitsInViewport =
+                section.offsetHeight <= window.innerHeight;
+
+            // Check whether the entire section is visible
+            const fullyVisible =
+                position.top >= 0 &&
+                position.bottom <= window.innerHeight;
+
+            // For tall sections, check whether they have entered
+            const partlyVisible =
+                position.top < window.innerHeight &&
+                position.bottom > 0;
+
+            if ((fitsInViewport && fullyVisible) ||
+                (!fitsInViewport && partlyVisible)) {
 
                 section.classList.add("feature-visible");
 
             }
             else {
-
                 section.classList.remove("feature-visible");
-
             }
         });
     }

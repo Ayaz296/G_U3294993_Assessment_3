@@ -13,7 +13,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 options.SignIn.RequireConfirmedAccount = true)
 .AddEntityFrameworkStores<ApplicationDbContext>()
-.AddDefaultUI();
+.AddDefaultUI()
+.AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDistributedMemoryCache();
