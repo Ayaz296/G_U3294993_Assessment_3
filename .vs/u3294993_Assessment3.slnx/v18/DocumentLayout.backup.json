@@ -7,14 +7,6 @@
       "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\images\\haze1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\images\\haze1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\images\\haze2.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\images\\haze2.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -52,41 +44,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "haze1.jpg -  [English (United States)] - Bitmap [1920x1080, 24 bit, JPG]",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\images\\haze1.jpg",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\images\\haze1.jpg",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\images\\haze1.jpg -  [English (United States)] - Bitmap [1920x1080, 24 bit, JPG]",
-              "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\images\\haze1.jpg -  [English (United States)] - Bitmap [1920x1080, 24 bit, JPG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-10-18T03:47:55.477Z",
-              "EditorCaption": " -  [English (United States)] - Bitmap [1920x1080, 24 bit, JPG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "haze2.jpg -  [English (United States)] - Bitmap [1920x2560, 24 bit, JPG]",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\images\\haze2.jpg",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\images\\haze2.jpg",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\images\\haze2.jpg -  [English (United States)] - Bitmap [1920x2560, 24 bit, JPG]",
-              "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\images\\haze2.jpg -  [English (United States)] - Bitmap [1920x2560, 24 bit, JPG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-10-18T03:47:51.07Z",
-              "EditorCaption": " -  [English (United States)] - Bitmap [1920x2560, 24 bit, JPG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAkwOoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-13T11:26:08.541Z",
               "EditorCaption": ""
@@ -99,14 +67,14 @@
               "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
               "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAPIBAAAAAAAAAAAAAPIBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH0DAAAAAAAAAAAAAKUDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-13T11:26:31.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "dbo.AspNetUsers.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUsers.sql",
@@ -115,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
@@ -127,20 +95,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Program.cs",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Program.cs",
               "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Program.cs",
               "RelativeToolTip": "u3294993_Assessment3\\Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAtwDMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T09:12:48.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T09:12:48.129Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\js\\site.js",
@@ -152,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Home\\Contact.cshtml",
@@ -164,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "dbo.AspNetUserRoles.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUserRoles.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUserRoles.sql",
@@ -173,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Controllers\\HomeController.cs",

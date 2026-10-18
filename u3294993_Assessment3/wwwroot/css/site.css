@@ -279,6 +279,17 @@ header {
 
 /* Dark Overlay on Video */
 
+.healthcare-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(2, 16, 37, 0.4), rgba(2, 16, 37, 0.7));
+    z-index: 1;
+    pointer-events: none;
+}
 
 /* Keep Text Above Video and Overlay */
 
@@ -460,12 +471,13 @@ header {
     opacity: 0.9;
 }
 
-/* Home/Index - Uploaded Images */
+/* Home/Index - Uploaded AI Images */
+/* This section shares the parent's healthcare-parallax background. */
 
 .home-ai-gallery {
     width: 100%;
     padding: 40px 20px;
-    background-color: #071c35;
+    background-color: transparent;
     color: white;
 }
 
@@ -473,67 +485,63 @@ header {
         text-align: center;
         margin-bottom: 30px;
         color: #f8bd08;
+        font-family: "Anton", sans-serif;
+        font-size: 4vw;
+        text-shadow: 2px 2px 0 navy, 2px 2px 4px white;
     }
-
-.home-ai-grid {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 15px;
-}
-
-.home-ai-card {
-    position: relative;
-    display: block;
-    height: 200px;
-    overflow: hidden;
-    text-decoration: none;
-    color: white;
-}
-
-    .home-ai-card img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-.home-ai-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.85);
-    opacity: 0;
-    transition: opacity 2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow-wrap: anywhere;
-}
-
-.home-ai-card:hover .home-ai-overlay,
-.home-ai-card:focus-visible .home-ai-overlay {
-    opacity: 1;
-}
-
-.home-ai-overlay h3 {
-    font-size: 1rem;
-}
-
-.home-ai-overlay p {
-    font-size: 0.8rem;
-}
 
 .home-ai-upload {
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
 }
 
     .home-ai-upload a {
         color: #f8bd08;
     }
+
+/* Up to six square cards per row, ordered by likes in HomeController. */
+.home-ai-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* Initially show a grey square with the ImageGenerator text. */
+.home-ai-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+
+.home-ai-name {
+    padding: 10px;
+    text-align: center;
+    font: normal 1.2vw Arial, sans-serif;
+    overflow-wrap: anywhere;
+}
+
+/* The uploaded image fades in over the text on hover. */
+.home-ai-card .home-ai-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.home-ai-card:hover .home-ai-image,
+.home-ai-card:focus-visible .home-ai-image {
+    opacity: 1;
+}
 
 /* Home/Contact - Contact Page */
 
@@ -607,6 +615,10 @@ header {
 
     .home-ai-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .home-ai-name {
+        font-size: 1rem;
     }
 
     .contact-page {
@@ -757,21 +769,13 @@ header {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .home-ai-card {
-        height: 150px;
+    .home-ai-name {
+        font-size: 0.9rem;
     }
 
-    .home-ai-overlay {
-        padding: 8px;
+    .home-ai-gallery h2 {
+        font-size: 2rem;
     }
-
-        .home-ai-overlay h3 {
-            font-size: 0.8rem;
-        }
-
-        .home-ai-overlay p {
-            font-size: 0.7rem;
-        }
 
     /* AI Images Gallery */
 

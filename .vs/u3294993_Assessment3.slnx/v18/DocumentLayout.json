@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,30 +44,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGQAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAkwOoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-13T11:26:08.541Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
               "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAMEBAAAAAAAAAAAAAFABAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAH0DAAAAAAAAAADwv5MDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-13T11:26:31.981Z",
               "EditorCaption": ""
@@ -103,8 +103,7 @@
               "RelativeToolTip": "u3294993_Assessment3\\Program.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T09:12:48.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T09:12:48.129Z"
             },
             {
               "$type": "Document",

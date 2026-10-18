@@ -4,7 +4,6 @@
     ViewData["Title"] = "AI in Healthcare";
 }
 
-
 <section class="healthcare-hero">
 
     <video class="healthcare-hero-video"
@@ -15,15 +14,18 @@
     <h1>Healthcare Made Smarter</h1>
 
     <p>
-        Pioneering the future of healthcare through cutting-edge AI technologies that redifine how hospitals operate
+        Pioneering the future of healthcare through cutting-edge
+        AI technologies that redefine how hospitals operate.
     </p>
 
 </section>
 
-
 <div class="healthcare-parallax">
 
+    <!-- AI-Powered Diagnostics -->
+
     <section class="healthcare-feature" data-reveal>
+
         <div class="healthcare-information">
             <h3>AI-Powered Diagnostics</h3>
 
@@ -40,6 +42,7 @@
         </div>
 
         <div class="healthcare-media">
+
             <a href="https://www.fda.gov/medical-devices">
                 <figure class="healthcare-image">
                     <img src="~/images/BioTech Path .png"
@@ -63,10 +66,15 @@
                     </figcaption>
                 </figure>
             </a>
+
         </div>
+
     </section>
 
+    <!-- Virtual Health Assistants -->
+
     <section class="healthcare-feature healthcare-feature-reverse" data-reveal>
+
         <div class="healthcare-information">
             <h3>Virtual Health Assistants</h3>
 
@@ -84,9 +92,10 @@
         </div>
 
         <div class="healthcare-media">
+
             <a href="https://www.who.int/health-topics/digital-health">
                 <figure class="healthcare-image">
-                    <img src="~/images/gemini.jpg"
+                    <img src="~/images/Healthcare AI 2.png"
                          alt="Virtual healthcare assistant" />
 
                     <figcaption>
@@ -107,10 +116,15 @@
                     </figcaption>
                 </figure>
             </a>
+
         </div>
+
     </section>
 
+    <!-- Predictive Analytics -->
+
     <section class="healthcare-feature" data-reveal>
+
         <div class="healthcare-information">
             <h3>Predictive Analytics</h3>
 
@@ -127,9 +141,10 @@
         </div>
 
         <div class="healthcare-media">
+
             <a href="https://www.healthit.gov/">
                 <figure class="healthcare-image">
-                    <img src="~/images/gemini.jpg"
+                    <img src="~/images/Ai monitering.png"
                          alt="Predictive healthcare analytics dashboard" />
 
                     <figcaption>
@@ -141,7 +156,7 @@
 
             <a href="https://www.cdc.gov/">
                 <figure class="healthcare-image">
-                    <img src="~/images/gemini.jpg"
+                    <img src="~/images/AI monitering 2.png"
                          alt="Healthcare monitoring and risk analysis" />
 
                     <figcaption>
@@ -150,57 +165,70 @@
                     </figcaption>
                 </figure>
             </a>
+
         </div>
+
     </section>
 
-</div>
+    <!-- Uploaded AI Images -->
 
-<section class="home-ai-gallery">
-    <h2>Upload AI Images</h2>
+    <section class="home-ai-gallery">
 
-    <div class="home-ai-upload">
-        @if (User.Identity != null && User.Identity.IsAuthenticated)
+        <h2>Upload AI Images</h2>
+
+        <div class="home-ai-upload">
+
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="AIImages"
+                   asp-action="Create">
+                    Click here to upload a new AI image
+                </a>
+            }
+            else
+            {
+                <p>
+                    Please
+                    <a asp-area="Identity"
+                       asp-page="/Account/Login">login</a>
+                    or
+                    <a asp-area="Identity"
+                       asp-page="/Account/Register">register</a>
+                    to upload your AI images.
+                </p>
+            }
+
+        </div>
+
+        @if (!Model.Any())
         {
-            <a asp-controller="AIImages" asp-action="Create">
-                Click here to upload a new AI image
-            </a>
+            <p>No images have been uploaded yet.</p>
         }
         else
         {
-            <p>
-                Please
-                <a asp-area="Identity" asp-page="/Account/Login">login</a>
-                or
-                <a asp-area="Identity" asp-page="/Account/Register">register</a>
-                to upload your AI images.
-            </p>
+            <div class="home-ai-grid">
+
+                @foreach (var item in Model)
+                {
+                    <a asp-controller="AIImages"
+                       asp-action="Index"
+                       asp-fragment="image-@item.Id"
+                       class="home-ai-card">
+
+                        <span class="home-ai-name">
+                            @item.ImageGenerator
+                        </span>
+
+                        <img src="@Url.Content("~/uploads/" + item.Filename)"
+                             alt="@item.Prompt"
+                             class="home-ai-image" />
+
+                    </a>
+                }
+
+            </div>
         }
-    </div>
 
-    @if (!Model.Any())
-    {
-        <p>No images have been uploaded yet.</p>
-    }
-    else
-    {
-        <div class="home-ai-grid">
-            @foreach (var item in Model)
-            {
-                <a asp-controller="AIImages"
-                   asp-action="Index"
-                   asp-fragment="image-@item.Id"
-                   class="home-ai-card">
+    </section>
 
-                    <img src="@Url.Content("~/uploads/" + item.Filename)"
-                         alt="@item.Prompt" />
-
-                    <div class="home-ai-overlay">
-                        <h3>@item.ImageGenerator</h3>
-                        <p>@item.Prompt</p>
-                        <span>Likes: @item.Like</span>
-                    </div>
-                </a>
-            }
-        </div>
-    }
-</section>
+</div>

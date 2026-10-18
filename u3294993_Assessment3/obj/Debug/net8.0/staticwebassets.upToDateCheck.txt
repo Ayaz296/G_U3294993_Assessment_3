@@ -1,4 +1,3 @@
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\1.mp4
 wwwroot\images\11.jpg
@@ -6,12 +5,15 @@ wwwroot\images\13266.jpg
 wwwroot\images\2.mp4
 wwwroot\images\30.mp4
 wwwroot\images\769.jpg
+wwwroot\images\AI monitering 2.png
+wwwroot\images\Ai monitering.png
 wwwroot\images\BioTech Path .png
 wwwroot\images\BioTech Path2.png
 wwwroot\images\gemini.jpg
 wwwroot\images\handinhand.jpg
 wwwroot\images\haze1.jpg
 wwwroot\images\haze2.jpg
+wwwroot\images\Healthcare AI 2.png
 wwwroot\images\Healthcare AI.png
 wwwroot\images\healthcare-preview.jpg
 wwwroot\images\medscan.mp4
@@ -86,3 +88,4 @@ wwwroot\uploads\a5e76879-cf5d-47f9-a553-679ae3d558e2.jpg
 wwwroot\uploads\d5ee573c-8413-46b2-ad7e-6ef3393d6c76.jpg
 wwwroot\uploads\e3c44acb-7a48-4738-99b2-6de4d3e53876.jpg
 wwwroot\uploads\e698a221-7dee-4ae2-a3c7-fd4a3c8f44f5.jpg
+wwwroot\css\site.css
