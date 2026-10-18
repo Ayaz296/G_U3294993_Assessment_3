@@ -1,6 +1,26 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\1.mp4
+wwwroot\images\11.jpg
+wwwroot\images\13266.jpg
+wwwroot\images\2.mp4
+wwwroot\images\30.mp4
+wwwroot\images\769.jpg
+wwwroot\images\BioTech Path .png
+wwwroot\images\BioTech Path2.png
+wwwroot\images\gemini.jpg
+wwwroot\images\handinhand.jpg
+wwwroot\images\haze1.jpg
+wwwroot\images\haze2.jpg
+wwwroot\images\Healthcare AI.png
 wwwroot\images\healthcare-preview.jpg
+wwwroot\images\medscan.mp4
+wwwroot\images\pexels-timothy-huliselan-205951426-12081338.jpg
+wwwroot\images\picturethis.mp4
+wwwroot\images\robothand_blue.jpg
+wwwroot\images\robothand_grey.jpg
+wwwroot\images\StockCake-Professional_medical_instrument-2362781-standard.png
+wwwroot\images\trial.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -59,16 +79,10 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\uploads\a5e76879-cf5d-47f9-a553-679ae3d558e2.jpg
-wwwroot\uploads\49e166a4-3389-4e48-99f0-391843eb458c.jpg
-wwwroot\uploads\e3c44acb-7a48-4738-99b2-6de4d3e53876.jpg
-wwwroot\uploads\a56872c2-f55f-4d89-a764-1ce15ae59fd6.jpeg
-wwwroot\uploads\d5ee573c-8413-46b2-ad7e-6ef3393d6c76.jpg
-wwwroot\uploads\e698a221-7dee-4ae2-a3c7-fd4a3c8f44f5.jpg
 wwwroot\uploads\1cf60fe6-68b5-4acd-b4ff-0fb1a31534c8.jpg
-wwwroot\images\gemini.jpg
-wwwroot\images\StockCake-Professional_medical_instrument-2362781-standard.png
-wwwroot\images\13266.jpg
-wwwroot\images\769.jpg
-wwwroot\images\1.mp4
-wwwroot\images\2.mp4
+wwwroot\uploads\49e166a4-3389-4e48-99f0-391843eb458c.jpg
+wwwroot\uploads\a56872c2-f55f-4d89-a764-1ce15ae59fd6.jpeg
+wwwroot\uploads\a5e76879-cf5d-47f9-a553-679ae3d558e2.jpg
+wwwroot\uploads\d5ee573c-8413-46b2-ad7e-6ef3393d6c76.jpg
+wwwroot\uploads\e3c44acb-7a48-4738-99b2-6de4d3e53876.jpg
+wwwroot\uploads\e698a221-7dee-4ae2-a3c7-fd4a3c8f44f5.jpg

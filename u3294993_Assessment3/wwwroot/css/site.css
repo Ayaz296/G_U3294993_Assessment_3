@@ -279,17 +279,6 @@ header {
 
 /* Dark Overlay on Video */
 
-.healthcare-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient( rgba(2, 16, 37, 0.4), rgba(2, 16, 37, 0.7) );
-    z-index: 1;
-    pointer-events: none;
-}
 
 /* Keep Text Above Video and Overlay */
 
@@ -308,7 +297,7 @@ header {
     padding: 0 2vw;
     margin: 0;
     text-align: center;
-    background-image: linear-gradient( to right, #3c075e, #7114a1, #b024a9, #8b1aaf, #3c075e );
+    background-image: linear-gradient( to right, brown, brown, yellow, white, yellow, brown, brown );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -341,7 +330,7 @@ header {
 /* Background Image Will Be Added Later */
 
 .healthcare-parallax {
-    background-color: #2c2630; /*Anth*/
+    background-image: url(../images/haze1.jpg); /*Anth*/
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -381,7 +370,7 @@ header {
     padding: 25px;
 }
 
-    /* Assessment Page 4 - Heading */
+    /* AI chatbots Heading */
 
     .healthcare-information h3 {
         font-family: "Anton", sans-serif;
@@ -390,7 +379,7 @@ header {
         text-shadow: 2px 2px 0px navy, 2px 2px 4px white;
     }
 
-    /* Assessment Page 4 - Paragraph */
+    /* AI chatbots Paragraph */
 
     .healthcare-information p {
         font-family: "Lato", serif;
