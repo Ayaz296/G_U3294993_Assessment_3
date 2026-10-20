@@ -154,15 +154,24 @@ header {
 .ai-gallery-header {
     text-align: center;
     padding: 90px 20px 50px;
-    background: linear-gradient(135deg, #071c35, #115e75);
+    background-image: url("../images/11.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
 }
 
     .ai-gallery-header h1 {
-        font-family: "Anton", sans-serif;
-        font-size: 4vw;
-        color: #f8bd08;
-        text-shadow: 4px 4px 0 navy, 4px 4px 8px white;
+        font-family: 'Anton', sans-serif;
+        background-image: linear-gradient( to right, brown, brown, yellow, white, yellow, brown, brown );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: brown;
+        padding: 9vw 2vw 0vw 2vw;
+        text-align: center;
+        font-size: 7vw;
+        margin: 0;
     }
 
     .ai-gallery-header a {
@@ -174,11 +183,12 @@ header {
 .ai-gallery-item {
     display: grid;
     grid-template-columns: 40% 60%;
-    min-height: 280px;
+    height: 390px;
     background: linear-gradient( to bottom, #ff9933, #ffe6cc, white );
 }
 
     .ai-gallery-item:nth-of-type(even) {
+        grid-template-columns: 60% 40%;
         background: linear-gradient( to bottom, #3333ff, #ccccff, white );
     }
 
@@ -188,7 +198,12 @@ header {
 
 .ai-gallery-image {
     width: 100%;
+    height: 100%;
+    min-height: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
     .ai-gallery-image img {
@@ -196,6 +211,7 @@ header {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
         transition: opacity 2s ease;
     }
 
@@ -204,10 +220,12 @@ header {
         }
 
 .ai-gallery-content {
+    min-height: 0;
     padding: 35px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-y: auto;
 }
 
     .ai-gallery-content h3 {
@@ -303,15 +321,16 @@ header {
 /* Hero Heading */
 
 .healthcare-hero h1 {
-    font-family: "Anton", sans-serif;
-    font-size: 7vw;
-    padding: 0 2vw;
-    margin: 0;
-    text-align: center;
+    font-family: 'Anton', sans-serif;
     background-image: linear-gradient( to right, brown, brown, yellow, white, yellow, brown, brown );
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: brown;
+    padding: 9vw 2vw 0vw 2vw;
+    text-align: center;
+    font-size: 7vw;
+    margin: 0;
 }
 
 /* Hero Description */
@@ -549,21 +568,23 @@ header {
     width: 100%;
     min-height: 85vh;
     padding: 90px 3vw 80px;
-    background-image: linear-gradient( rgba(2, 16, 37, 0.65), rgba(2, 16, 37, 0.65) ), url("../images/healthcare-background.jpg");
+    background-image: linear-gradient( rgba(2, 16, 37, 0.65), rgba(2, 16, 37, 0.65) ), url("../images/haze1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
 .contact-heading {
-    font-family: "Anton", sans-serif;
-    font-size: 7vw;
-    text-align: center;
-    margin-bottom: 50px;
+    font-family: 'Anton', sans-serif;
     background-image: linear-gradient( to right, brown, brown, yellow, white, yellow, brown, brown );
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: brown;
+    padding: 9vw 2vw 0vw 2vw;
+    text-align: center;
+    font-size: 7vw;
+    margin: 0;
 }
 
 /* Bootstrap Contact Columns */
@@ -692,17 +713,26 @@ header {
 
     /* AI Images Gallery */
 
-    .ai-gallery-item {
+    .ai-gallery-item,
+    .ai-gallery-item:nth-of-type(even) {
         grid-template-columns: 1fr;
+        grid-template-rows: 240px minmax(0, 1fr);
+        height: 480px;
     }
 
         .ai-gallery-item:nth-of-type(even) .ai-gallery-image {
             order: 0;
         }
 
-    .ai-gallery-image img {
-        height: 260px;
+    .ai-gallery-image {
+        height: 240px;
     }
+
+        .ai-gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
     .ai-gallery-content {
         padding: 25px 20px;
@@ -784,7 +814,7 @@ header {
     }
 
     .ai-gallery-image img {
-        height: 210px;
+        height: 100%;
     }
 
     .ai-gallery-content {
@@ -930,4 +960,7 @@ header {
     .bottom-bar-button {
         font-size: 0.8rem;
     }
+
+
+
 }

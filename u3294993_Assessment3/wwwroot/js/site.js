@@ -58,4 +58,6 @@
     window.addEventListener("resize", checkFeatureVisibility);
 
     checkFeatureVisibility();
+
+
 });

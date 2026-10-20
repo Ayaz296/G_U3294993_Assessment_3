@@ -1,8 +1,11 @@
+
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using u3294993_Assessment3.Models;
 using Microsoft.EntityFrameworkCore;
 using u3294993_Assessment3.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace u3294993_Assessment3.Controllers
 {
@@ -10,13 +13,16 @@ namespace u3294993_Assessment3.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public HomeController(
             ILogger<HomeController> logger,
-            ApplicationDbContext context)
+            ApplicationDbContext context,
+            SignInManager<IdentityUser> signInManager)
         {
             _logger = logger;
             _context = context;
+            _signInManager = signInManager;
         }
 
         public async Task<IActionResult> Index()
@@ -27,6 +33,18 @@ namespace u3294993_Assessment3.Controllers
                 .ToListAsync();
 
             return View(images);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+
+            HttpContext.Session.Clear();
+
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Privacy()
@@ -42,7 +60,10 @@ namespace u3294993_Assessment3.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel
+            {
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            });
         }
     }
 }
