@@ -1,24 +1,35 @@
-﻿
+﻿@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+    var action = ViewContext.RouteData.Values["action"]?.ToString();
+
+    // Pages that already have their own hero or header
+    bool hasHero =
+        (controller == "Home" &&
+        (action == "Index" || action == "Contact" || action == "Helios")) ||
+        (controller == "AIImages" && action == "Index");
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>@ViewData["Title"] - HealthX</title>
 
+    <!-- Bootstrap -->
     <link rel="stylesheet"
           href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap"
-      rel="stylesheet" />
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Lato&amp;family=Montserrat&amp;family=Niconne&amp;family=Oxygen&amp;display=swap"
           rel="stylesheet" />
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Website CSS -->
     <link rel="stylesheet"
           href="~/css/site.css"
           asp-append-version="true" />
@@ -30,14 +41,11 @@
 
 <body>
 
-
-    @*the bottom bar*@
-
-
-    
+    @* Bottom Bar *@
     <div class="bottom-bar">
         <div class="bottom-button-wrapper">
-            <a asp-controller="AIImages"
+            <a asp-area=""
+               asp-controller="AIImages"
                asp-action="Index"
                class="bottom-bar-button">
                 <span class="star-icon">✦</span>
@@ -46,12 +54,8 @@
         </div>
     </div>
 
-
-
+    @* Floating Navbar *@
     <header class="healthcare-header">
-
-  
-
         <nav class="navbar navbar-expand-sm navbar-dark healthcare-navbar">
             <div class="container-fluid">
 
@@ -59,7 +63,7 @@
                    asp-area=""
                    asp-controller="Home"
                    asp-action="Index">
-                    BioTech 
+                    BioTech
                 </a>
 
                 <button class="navbar-toggler"
@@ -69,12 +73,10 @@
                         aria-controls="mainNavbar"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
-
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="mainNavbar">
-
                     <ul class="navbar-nav me-auto">
 
                         <li class="nav-item">
@@ -99,98 +101,95 @@
                             <a class="nav-link"
                                asp-area=""
                                asp-controller="Home"
+                               asp-action="Helios">
+                                HELIOS
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Home"
                                asp-action="Contact">
                                 Contact
                             </a>
                         </li>
 
-
                     </ul>
 
                     <partial name="_LoginPartial" />
-
                 </div>
+
             </div>
         </nav>
     </header>
 
-    <div class="container-fluid p-0 healthcare-main">
+    @* Main Content *@
+    <div class="container-fluid healthcare-main @(hasHero ? "p-0" : "healthcare-form-page")">
         <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    @* Footer Icons & Links *@
-
+    @* Footer *@
     <footer class="healthcare-footer">
         <div class="container-fluid">
 
             <div class="footer-icons">
 
-                <a asp-controller="Home"
+                <a asp-area=""
+                   asp-controller="Home"
                    asp-action="Index"
                    aria-label="Home">
                     <i class="fa-solid fa-house"></i>
                 </a>
 
-                <a asp-controller="AIImages"
+                <a asp-area=""
+                   asp-controller="AIImages"
                    asp-action="Index"
                    aria-label="AI Images">
                     <i class="fa-solid fa-images"></i>
                 </a>
 
-                <a asp-controller="AIImages"
+                <a asp-area=""
+                   asp-controller="AIImages"
                    asp-action="Create"
                    aria-label="Upload AI Image">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </a>
 
-                <a asp-controller="Home"
+                <a asp-area=""
+                   asp-controller="Home"
                    asp-action="Contact"
                    aria-label="Contact">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
 
-                <a asp-controller="Home"
-                   asp-action="Privacy"
-                   aria-label="Privacy">
-                    <i class="fa-solid fa-shield-halved"></i>
+                <a asp-area=""
+                   asp-controller="Home"
+                   asp-action="Helios"
+                   aria-label="HELIOS">
+                    <i class="fa-solid fa-heart-pulse"></i>
                 </a>
 
             </div>
 
             <div class="footer-links">
-
-                <a asp-controller="Home"
-                   asp-action="Index">
-                    Home
-                </a>
-
-                <a asp-controller="AIImages"
-                   asp-action="Index">
-                    AI Images
-                </a>
-
-                <a asp-controller="Home"
-                   asp-action="Contact">
-                    Contact
-                </a>
-
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-area="" asp-controller="AIImages" asp-action="Index">AI Images</a>
+                <a asp-area="" asp-controller="Home" asp-action="Helios">HELIOS</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
             </div>
 
-            <p>
-                &copy; 2026 - AI in Healthcare
-            </p>
+            <p>&copy; 2026 - AI in Healthcare</p>
 
         </div>
     </footer>
 
+    @* JavaScript *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="~/js/site.js"
-            asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

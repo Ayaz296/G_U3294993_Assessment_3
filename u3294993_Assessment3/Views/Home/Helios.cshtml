@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "HELIOS - Hospital Intelligence";
+}
+
+<main class="helios-page">
+    <section class="helios-hero">
+        <div class="helios-hero-inner">
+            <span class="helios-kicker">Artificial Intelligence in Healthcare</span>
+            <h1>HELIOS</h1>
+            <h2>Hospital Intelligence &amp; Operations System</h2>
+            <p>Intelligence behind every hospital decision. Explore how a connected healthcare system could bring departments, rooms, patient care and operational insights together.</p>
+            <a class="helios-jump" href="#helios-dashboard">Explore the Command Centre ↓</a>
+        </div>
+    </section>
+
+    <section class="helios-backdrop">
+        <h2 class="helios-section-title helios-reveal">ONE HOSPITAL. ONE SYSTEM.</h2>
+        <p class="helios-section-subtitle helios-reveal">A unified view of hospital operations, designed to make complex information easier to understand.</p>
+        <div class="helios-features">
+            <article class="helios-feature helios-reveal"><div class="helios-feature-symbol">▦</div><h3>DEPARTMENT MONITORING</h3><p>View capacity across hospital departments and identify which rooms are currently occupied or available.</p></article>
+            <article class="helios-feature helios-reveal"><div class="helios-feature-symbol">◈</div><h3>ROOM INTELLIGENCE</h3><p>Select individual rooms to see their temperature, assigned patient, current treatment and status.</p></article>
+            <article class="helios-feature helios-reveal"><div class="helios-feature-symbol">✧</div><h3>OPERATIONAL INSIGHTS</h3><p>Explore illustrative recommendations based on department occupancy and room availability.</p></article>
+        </div>
+    </section>
+
+    <section class="helios-dashboard-section" id="helios-dashboard">
+        <h2 class="helios-section-title helios-reveal">COMMAND CENTRE</h2>
+        <p class="helios-section-subtitle helios-reveal">Select a department, then select a room to explore the fictional patient's treatment and room conditions.</p>
+        <div class="helios-board helios-reveal">
+            <div class="helios-metrics">
+                <div class="helios-metric"><span>Total Rooms</span><strong id="helios-total-rooms">0</strong></div>
+                <div class="helios-metric"><span>Occupied Rooms</span><strong id="helios-occupied-rooms">0</strong></div>
+                <div class="helios-metric"><span>Available Rooms</span><strong id="helios-available-rooms">0</strong></div>
+                <div class="helios-metric"><span>Departments</span><strong id="helios-department-count">0</strong></div>
+            </div>
+            <div class="helios-board-body">
+                <aside class="helios-departments"><h4>Departments</h4><nav class="helios-department-list" id="helios-department-list" aria-label="Hospital departments"></nav></aside>
+                <div class="helios-panel">
+                    <div class="helios-panel-heading"><div><h3 id="helios-selected-department">Department</h3><p id="helios-department-description"></p></div><span class="helios-occupancy" id="helios-department-occupancy"></span></div>
+                    <div class="helios-legend"><span>Occupied</span><span class="available">Available</span></div>
+                    <div class="helios-room-grid" id="helios-room-grid"></div>
+                    <section class="helios-detail-card" id="helios-room-details" aria-live="polite"></section>
+                    <section class="helios-insights"><h4>✧ HELIOS INSIGHT</h4><p id="helios-insight-text"></p></section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="helios-closing"><h2>SMARTER HOSPITALS.<br>BETTER COORDINATION.</h2><p>From department capacity to room-level information, HELIOS explores the potential of connected healthcare operations.</p></section>
+</main>
