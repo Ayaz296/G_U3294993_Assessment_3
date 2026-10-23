@@ -3,28 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUserRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\migrations\\20261023104532_initialsqlite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\migrations\\20261023104532_initialsqlite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\aiimages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\aiimages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\aiimages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\aiimages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,83 +28,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAYwH8AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-23T08:03:24.722Z",
+              "Title": "dbo.AspNetUsers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "dbo.AspNetUsers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-10-23T10:49:13.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAEIAAAAAAAAAAADwv1MAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-21T04:20:29.18Z",
+              "Title": "dbo.AspNetUserRoles [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUserRoles.sql",
+              "ToolTip": "dbo.AspNetUserRoles [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-10-23T10:49:10.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\AIImages\\Delete.cshtml",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\AIImages\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\AIImages\\Delete.cshtml",
-              "RelativeToolTip": "u3294993_Assessment3\\Views\\AIImages\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-21T10:44:09.894Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\AIImages\\Edit.cshtml",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\AIImages\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\AIImages\\Edit.cshtml",
-              "RelativeToolTip": "u3294993_Assessment3\\Views\\AIImages\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-21T10:43:51.851Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAABgBAAAAAAAAAAAAwC0BAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-10-21T05:37:26.71Z",
+              "Title": "20261023104532_InitialSQLite.cs",
+              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Migrations\\20261023104532_InitialSQLite.cs",
+              "RelativeDocumentMoniker": "u3294993_Assessment3\\Migrations\\20261023104532_InitialSQLite.cs",
+              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Migrations\\20261023104532_InitialSQLite.cs",
+              "RelativeToolTip": "u3294993_Assessment3\\Migrations\\20261023104532_InitialSQLite.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAQwBkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T10:45:32.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAiwKkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-21T07:18:05.696Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Program.cs",
+              "RelativeDocumentMoniker": "u3294993_Assessment3\\Program.cs",
+              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Program.cs",
+              "RelativeToolTip": "u3294993_Assessment3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T10:42:49.886Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\appsettings.json",
+              "RelativeDocumentMoniker": "u3294993_Assessment3\\appsettings.json",
+              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\appsettings.json",
+              "RelativeToolTip": "u3294993_Assessment3\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-23T10:42:31.523Z"
             }
           ]
         }
