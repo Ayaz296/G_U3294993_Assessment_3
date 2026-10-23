@@ -37,22 +37,20 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.AspNetUsers [Data]",
+              "Title": "dbo.AspNetUsers.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "dbo.AspNetUsers [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUsers.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-10-23T10:49:13.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T10:49:13.891Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "dbo.AspNetUserRoles [Data]",
+              "Title": "dbo.AspNetUserRoles.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUserRoles.sql",
-              "ToolTip": "dbo.AspNetUserRoles [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_u3294993_Assessment3_3a29f313_d77b_4f3c_b23b_70fd73cdf8e4/True/SqlTable/dbo.AspNetUserRoles.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-10-23T10:49:10.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T10:49:10.568Z"
             },
             {
               "$type": "Document",
@@ -64,8 +62,7 @@
               "RelativeToolTip": "u3294993_Assessment3\\Migrations\\20261023104532_InitialSQLite.cs",
               "ViewState": "AgIAAHkAAAAAAAAAAAAQwBkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T10:45:32.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T10:45:32.37Z"
             },
             {
               "$type": "Document",
@@ -77,8 +74,7 @@
               "RelativeToolTip": "u3294993_Assessment3\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T10:42:49.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T10:42:49.886Z"
             },
             {
               "$type": "Document",
