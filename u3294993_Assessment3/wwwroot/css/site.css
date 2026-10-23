@@ -85,58 +85,74 @@ header {
         border-color: white;
     }
 
-/* Footer */
+
+/* Compact footer using the same navy and gold colours as the website */
 .healthcare-footer {
-    width: 100%;
     background-color: #071c35;
     color: white;
     text-align: center;
-    padding: 30px 20px 40px;
+    padding: 18px 15px 12px;
 }
 
+/* Flexbox places the navigation links and icons side by side for compact look */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links,
 .footer-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 20px;
+    gap: 15px;
+    margin: 0;
 }
 
+    /* Shared styling */
+    .footer-links a,
     .footer-icons a {
         color: white;
-        font-size: 1.8rem;
         text-decoration: none;
         transition: color 0.3s ease;
     }
 
-        .footer-icons a:hover,
-        .footer-icons a:focus {
-            color: #f8bd08;
-        }
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 15px;
-}
-
     .footer-links a {
-        color: white;
-        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-icons a {
+        color: #f8bd08;
+        font-size: 1rem;
     }
 
         .footer-links a:hover,
-        .footer-links a:focus {
+        .footer-icons a:hover {
             color: #f8bd08;
-            text-decoration: underline;
         }
 
 .healthcare-footer p {
-    margin-bottom: 0;
-    font-size: 0.9rem;
+    margin: 10px 0 0;
+    color: #aab4c4;
+    font-size: 0.75rem;
 }
+
+/* Reduce gaps on mobile so the footer fits smaller screens */
+@media (max-width: 575px) {
+    .footer-content {
+        gap: 12px;
+    }
+
+    .footer-links,
+    .footer-icons {
+        gap: 12px;
+    }
+}
+
 
 /* AI Images gallery */
 .ai-gallery {

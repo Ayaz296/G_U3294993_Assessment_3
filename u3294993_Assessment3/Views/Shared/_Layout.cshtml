@@ -131,60 +131,49 @@
         </main>
     </div>
 
-    @* Footer *@
+    
+    @* Footer - shared across all pages to avoid repeating the same code, *@
     <footer class="healthcare-footer">
         <div class="container-fluid">
 
-            <div class="footer-icons">
+            @* Keep navigation links and icons on one row for a more design matching the Assessment-3 screenshots *@
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                    <a asp-controller="AIImages" asp-action="Index">AI Images</a>
+                    <a asp-controller="Home" asp-action="Helios">HELIOS</a>
+                    <a asp-controller="Home" asp-action="Contact">Contact</a>
+                </div>
 
-                <a asp-area=""
-                   asp-controller="Home"
-                   asp-action="Index"
-                   aria-label="Home">
-                    <i class="fa-solid fa-house"></i>
-                </a>
+                @* Quick access icons using the Font Awesome library *@
+                <div class="footer-icons">
+                    <a asp-controller="Home" asp-action="Index" aria-label="Home">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
 
-                <a asp-area=""
-                   asp-controller="AIImages"
-                   asp-action="Index"
-                   aria-label="AI Images">
-                    <i class="fa-solid fa-images"></i>
-                </a>
+                    <a asp-controller="AIImages" asp-action="Index" aria-label="AI Images">
+                        <i class="fa-solid fa-images"></i>
+                    </a>
 
-                <a asp-area=""
-                   asp-controller="AIImages"
-                   asp-action="Create"
-                   aria-label="Upload AI Image">
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                </a>
+                    <a asp-controller="AIImages" asp-action="Create" aria-label="Upload AI Image">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </a>
 
-                <a asp-area=""
-                   asp-controller="Home"
-                   asp-action="Contact"
-                   aria-label="Contact">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
+                    <a asp-controller="Home" asp-action="Helios" aria-label="HELIOS">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </a>
 
-                <a asp-area=""
-                   asp-controller="Home"
-                   asp-action="Helios"
-                   aria-label="HELIOS">
-                    <i class="fa-solid fa-heart-pulse"></i>
-                </a>
-
+                    <a asp-controller="Home" asp-action="Contact" aria-label="Contact">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-
-            <div class="footer-links">
-                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                <a asp-area="" asp-controller="AIImages" asp-action="Index">AI Images</a>
-                <a asp-area="" asp-controller="Home" asp-action="Helios">HELIOS</a>
-                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
-            </div>
-
-            <p>&copy; 2026 - AI in Healthcare</p>
+            @*Removed the copyright icon, to prevent copyright issues as website is for educational purposes *@
+            <p>2026 - BioTech AI</p>
 
         </div>
     </footer>
+
 
     @* JavaScript *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

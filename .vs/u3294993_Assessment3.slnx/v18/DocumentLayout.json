@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|solutionrelative:u3294993_assessment3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{610C552C-D478-481E-8CFC-A505BEB9BEF1}|u3294993_Assessment3\\u3294993_Assessment3.csproj|c:\\users\\bubbl\\source\\repos\\g_u3294993_assessment_3\\u3294993_assessment3\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -34,7 +38,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAADwv1MAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-21T04:20:29.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\AIImages\\Delete.cshtml",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\AIImages\\Delete.cshtml",
@@ -46,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\AIImages\\Edit.cshtml",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\AIImages\\Edit.cshtml",
@@ -58,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\js\\site.js",
@@ -66,32 +83,33 @@
               "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\js\\site.js",
               "ViewState": "AgIAABgBAAAAAAAAAAAAwC0BAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-10-21T05:37:26.71Z"
+              "WhenOpened": "2026-10-21T05:37:26.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "u3294993_Assessment3\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAWwIMAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAiwKkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-21T07:18:05.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "u3294993_Assessment3\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAKAHAAAAAAAAAAAvwLAHAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-21T04:20:29.18Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bubbl\\source\\repos\\G_U3294993_Assessment_3\\u3294993_Assessment3\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "u3294993_Assessment3\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwH8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-23T08:03:24.722Z",
               "EditorCaption": ""
             }
           ]
