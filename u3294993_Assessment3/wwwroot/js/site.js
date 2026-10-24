@@ -1,8 +1,8 @@
 ﻿
-// Home page - Like scrolling and section transitions
+// Scrolling to the image after clicking Like and showing sections when they're in view
 window.addEventListener("load", function () {
 
-    // Scroll to the image after clicking Like
+    // Getting the image ID from the URL after clicking Like
     const highlight = new URLSearchParams(window.location.search).get("highlight");
 
     if (highlight !== null) {
@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
         }
     }
 
-    // Healthcare section visibility
+    // Checking which healthcare sections are visible while scrolling
     const sections = document.querySelectorAll(".healthcare-feature");
 
     function checkVisibility() {
@@ -29,8 +29,9 @@ window.addEventListener("load", function () {
             const partiallyVisible =
                 box.top < window.innerHeight && box.bottom > 0;
 
+            // Showing the section when it fits in the viewport or becomes slightly visible
             const visible =
-                window.innerWidth <= 766 ||
+                window.matchMedia("(max-width: 767.98px)").matches ||
                     section.offsetHeight <= window.innerHeight
                     ? fullyVisible
                     : partiallyVisible;
@@ -47,18 +48,17 @@ window.addEventListener("load", function () {
 });
 
 
-// HELIOS - Interactive hospital dashboard
+// Running the hospital dashboard only when the HELIOS page is opened
 document.addEventListener("DOMContentLoaded", function () {
 
     const departmentList = document.getElementById("helios-department-list");
 
-    // Only run on HELIOS page
     if (!departmentList) return;
 
     const roomGrid = document.getElementById("helios-room-grid");
     const roomDetails = document.getElementById("helios-room-details");
 
-    // Fictional hospital data
+    // Sample patient and room information for the hospital dashboard
     const departments = [
         {
             id: "emergency",
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // Create an HTML element with optional text and class
+    // Creating HTML elements to display room details and department buttons
     function createElement(tag, text, className) {
         const element = document.createElement(tag);
 
@@ -137,14 +137,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return element;
     }
 
-    // Count occupied rooms
+    // Counting rooms that have a patient assigned to them
     function occupiedCount(department) {
         return department.rooms.filter(function (room) {
             return room.patient !== null;
         }).length;
     }
 
-    // Calculate hospital statistics
+    // Calculating the total number of rooms and occupied rooms across the hospital
     let totalRooms = 0;
     let occupiedRooms = 0;
 
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("helios-available-rooms").textContent = totalRooms - occupiedRooms;
     document.getElementById("helios-department-count").textContent = departments.length;
 
-    // Display selected room
+    // Updating the room details when a different room is selected
     function showRoom(room, button) {
         roomGrid.querySelectorAll("button").forEach(function (item) {
             item.classList.remove("selected");
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
         roomDetails.appendChild(grid);
     }
 
-    // Display selected department
+    // Changing the displayed rooms and occupancy information for the selected department
     function showDepartment(id) {
         const department = departments.find(function (item) {
             return item.id === id;
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("helios-department-occupancy").textContent =
             percentage + "% Occupied";
 
-        // Highlight selected department
+        // Highlighting the selected department in the list
         departmentList.querySelectorAll("button").forEach(function (button) {
             const selected = button.dataset.id === id;
             button.classList.toggle("active", selected);
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         roomGrid.innerHTML = "";
 
-        // Generate room buttons
+        // Creating clickable buttons for every room in the department
         department.rooms.forEach(function (room) {
             const button = createElement("button", null, "helios-room");
             button.type = "button";
@@ -251,12 +251,12 @@ document.addEventListener("DOMContentLoaded", function () {
             roomGrid.appendChild(button);
         });
 
-        // Select first room
+        // Showing the first room by default when changing departments
         if (department.rooms.length > 0) {
             showRoom(department.rooms[0], roomGrid.querySelector("button"));
         }
 
-        // Operational insight
+        // Displaying an occupancy warning when a department reaches 80% capacity
         const message = percentage >= 80
             ? department.name + " is at " + percentage +
             "% occupancy with " + available +
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("helios-insight-text").textContent = message;
     }
 
-    // Generate department buttons
+    // Creating the department buttons and opening the selected department when clicked
     departments.forEach(function (department) {
         const button = createElement("button", null, "helios-department-button");
         button.type = "button";
@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showDepartment("emergency");
 
-    // Scroll reveal animations
+    // Revealing dashboard sections as they enter the viewport
     const targets = document.querySelectorAll(".helios-reveal");
 
     if ("IntersectionObserver" in window) {
@@ -312,4 +312,39 @@ document.addEventListener("DOMContentLoaded", function () {
             element.classList.add("visible");
         });
     }
+});
+
+
+// Showing a preview when an image is selected on the Create page
+document.addEventListener("DOMContentLoaded", function () {
+
+    const imageFile = document.getElementById("imageFile");
+
+    const preview = document.getElementById("imagePreview");
+    const message = document.getElementById("previewMessage");
+
+    // Skipping the preview code on pages that don't contain the image upload form
+    if (!imageFile || !preview || !message) return;
+
+    imageFile.addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            // Displaying the chosen image without uploading it to the server
+            reader.onload = function (event) {
+                preview.src = event.target.result;
+                preview.classList.remove("d-none");
+                message.classList.add("d-none");
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            // Restoring the message when no valid image is selected
+            preview.removeAttribute("src");
+            preview.classList.add("d-none");
+            message.classList.remove("d-none");
+        }
+    });
 });

@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using u3294993_Assessment3.Models;
@@ -18,7 +19,7 @@ public class AIImagesController : Controller
         _environment = environment;
     }
 
-    // GET: AIIMAGES
+    // Showing uploaded images from highest to lowest number of likes
     [AllowAnonymous]
     public async Task<IActionResult> Index()
     {
@@ -27,6 +28,7 @@ public class AIImagesController : Controller
             .ToListAsync());
     }
 
+    // Allowing logged-in users to like each image once per session
     [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -34,6 +36,7 @@ public class AIImagesController : Controller
     {
         var aiimage = await _context.AIImage.FindAsync(id);
 
+        // Returning 404 if the image record doesn't exist anymore
         if (aiimage == null)
         {
             return NotFound();
@@ -51,10 +54,11 @@ public class AIImagesController : Controller
             HttpContext.Session.SetString(sessionKey, "true");
         }
 
+        // Returning to the gallery and scrolling to the liked image
         return RedirectToAction(nameof(Index), new { highlight = id });
     }
 
-    // GET: AIIMAGES/Details/5
+    // Restricting image details to administrators
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> Details(int? id)
     {
@@ -74,7 +78,7 @@ public class AIImagesController : Controller
         return View(aiimage);
     }
 
-    // GET: AIIMAGES/Create
+    // Setting the upload date and likes before displaying the Create form
     [Authorize]
     public IActionResult Create()
     {
@@ -85,7 +89,7 @@ public class AIImagesController : Controller
         return View(aiimage);
     }
 
-    // POST: AIIMAGES/Create
+    // Saving the uploaded image and its information to the database
     [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -93,6 +97,7 @@ public class AIImagesController : Controller
         [Bind("Prompt,ImageGenerator")] AIImage aiimage,
         IFormFile? imageFile)
     {
+        // Setting these values on the server so users can't change them through the form
         aiimage.UploadDate = DateTime.Now;
         aiimage.Like = 0;
         aiimage.canIncreaseLike = true;
@@ -100,6 +105,7 @@ public class AIImagesController : Controller
 
         ModelState.Remove(nameof(AIImage.Filename));
 
+        // Checking that a file was selected and has an allowed extension
         if (imageFile == null || imageFile.Length == 0)
         {
             ModelState.AddModelError("imageFile",
@@ -118,8 +124,6 @@ public class AIImagesController : Controller
                 ModelState.AddModelError("imageFile",
                     "Only JPG, PNG and WebP images are allowed.");
             }
-
-
         }
 
         if (ModelState.IsValid && imageFile != null)
@@ -127,6 +131,7 @@ public class AIImagesController : Controller
             string extension = Path.GetExtension(
                 imageFile.FileName).ToLowerInvariant();
 
+            // Giving uploaded files unique names to avoid overwriting existing images
             string filename = Guid.NewGuid().ToString() + extension;
 
             string uploadsFolder = Path.Combine(
@@ -139,6 +144,7 @@ public class AIImagesController : Controller
 
             try
             {
+                // Saving the image to wwwroot/uploads before creating its database record
                 using (var stream = new FileStream(
                     filePath, FileMode.CreateNew))
                 {
@@ -154,6 +160,7 @@ public class AIImagesController : Controller
             }
             catch (IOException)
             {
+                // Removing the uploaded file if saving it fails
                 if (System.IO.File.Exists(filePath))
                 {
                     System.IO.File.Delete(filePath);
@@ -164,6 +171,7 @@ public class AIImagesController : Controller
             }
             catch (DbUpdateException)
             {
+                // Removing the uploaded file if its database record can't be saved
                 if (System.IO.File.Exists(filePath))
                 {
                     System.IO.File.Delete(filePath);
@@ -177,7 +185,7 @@ public class AIImagesController : Controller
         return View(aiimage);
     }
 
-    // GET: AIIMAGES/Edit/5
+    // Loading the selected image into the Edit form for administrators
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> Edit(int? id)
     {
@@ -196,8 +204,7 @@ public class AIImagesController : Controller
         return View(aiimage);
     }
 
-    // POST: AIIMAGES/Edit/5
-
+    // Updating image information and replacing the uploaded file when required
     [Authorize(Roles = "admin")]
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -211,6 +218,7 @@ public class AIImagesController : Controller
             return NotFound();
         }
 
+        // Checking the existing record before making any changes
         var existingImage = await _context.AIImage.FindAsync(id);
 
         if (existingImage == null)
@@ -221,6 +229,7 @@ public class AIImagesController : Controller
         aiimage.Filename = existingImage.Filename;
         ModelState.Remove(nameof(AIImage.Filename));
 
+        // Validating the replacement file only when a new image is selected
         if (imageFile != null)
         {
             string extension = Path.GetExtension(
@@ -235,8 +244,6 @@ public class AIImagesController : Controller
                 ModelState.AddModelError("imageFile",
                     "Please upload a JPG, PNG or WebP image.");
             }
-
-
         }
 
         if (ModelState.IsValid)
@@ -260,6 +267,7 @@ public class AIImagesController : Controller
 
                     newFilePath = Path.Combine(uploadsFolder, filename);
 
+                    // Uploading the replacement before removing the previous image
                     using (var stream = new FileStream(
                         newFilePath, FileMode.CreateNew))
                     {
@@ -272,12 +280,14 @@ public class AIImagesController : Controller
                     existingImage.Filename = filename;
                 }
 
+                // Updating the record while keeping the existing number of likes
                 existingImage.Prompt = aiimage.Prompt;
                 existingImage.ImageGenerator = aiimage.ImageGenerator;
                 existingImage.UploadDate = DateTime.Now;
 
                 await _context.SaveChangesAsync();
 
+                // Deleting the previous file only if a replacement was saved
                 if (newFilePath != null &&
                     oldFilePath != null &&
                     System.IO.File.Exists(oldFilePath))
@@ -288,6 +298,7 @@ public class AIImagesController : Controller
                     }
                     catch (IOException)
                     {
+                        // Keeping the saved record even if the old file can't be removed
                     }
                 }
 
@@ -295,6 +306,7 @@ public class AIImagesController : Controller
             }
             catch (IOException)
             {
+                // Cleaning up the replacement file if the update fails
                 if (newFilePath != null &&
                     System.IO.File.Exists(newFilePath))
                 {
@@ -306,6 +318,7 @@ public class AIImagesController : Controller
             }
             catch (DbUpdateException)
             {
+                // Removing the new file if the database changes couldn't be saved
                 if (newFilePath != null &&
                     System.IO.File.Exists(newFilePath))
                 {
@@ -317,6 +330,7 @@ public class AIImagesController : Controller
             }
         }
 
+        // Restoring stored values when redisplaying the Edit form after an error
         aiimage.UploadDate = existingImage.UploadDate;
         aiimage.Like = existingImage.Like;
         aiimage.Filename = existingImage.Filename;
@@ -324,8 +338,7 @@ public class AIImagesController : Controller
         return View(aiimage);
     }
 
-
-    // GET: AIIMAGES/Delete/5
+    // Displaying the deletion confirmation for an existing record
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> Delete(int? id)
     {
@@ -337,6 +350,7 @@ public class AIImagesController : Controller
         var aiimage = await _context.AIImage
             .FirstOrDefaultAsync(m => m.Id == id);
 
+        // Preventing the deletion page from opening if the record is already missing
         if (aiimage == null)
         {
             return NotFound();
@@ -345,8 +359,7 @@ public class AIImagesController : Controller
         return View(aiimage);
     }
 
-    // POST: AIIMAGES/Delete/5
-    // POST: AIIMAGES/Delete/5
+    // Deleting the database record first, then removing its uploaded image
     [Authorize(Roles = "admin")]
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
@@ -359,6 +372,7 @@ public class AIImagesController : Controller
 
         var aiimage = await _context.AIImage.FindAsync(id);
 
+        // Returning 404 if the database record has already been deleted
         if (aiimage == null)
         {
             return NotFound();
@@ -368,6 +382,7 @@ public class AIImagesController : Controller
 
         try
         {
+            // Deleting the record from the database before removing the physical file
             _context.AIImage.Remove(aiimage);
             await _context.SaveChangesAsync();
         }
@@ -379,6 +394,7 @@ public class AIImagesController : Controller
             return View("Delete", aiimage);
         }
 
+        // Checking that the saved filename doesn't contain an invalid file path
         if (string.IsNullOrEmpty(filename) ||
             Path.GetFileName(filename) != filename)
         {
@@ -393,6 +409,7 @@ public class AIImagesController : Controller
 
         try
         {
+// Checking whether the uploaded file still exists before deleting it
             if (System.IO.File.Exists(filePath))
             {
                 System.IO.File.Delete(filePath);
@@ -402,6 +419,7 @@ public class AIImagesController : Controller
             }
             else
             {
+        // The record is deleted even if its image was already missing
                 TempData["ErrorMessage"] =
                     "Record deleted. The image file was already missing.";
             }
